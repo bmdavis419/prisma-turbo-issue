@@ -1,0 +1,22 @@
+{
+  "name": "@acme/cli",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "build1": "esbuild src/app.ts --bundle --outfile=dist/app.js",
+    "build2": "tsup src",
+    "start": "node dist/app.js",
+    "dev": "pnpm with-env next dev",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@acme/db": "*",
+    "tsup": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.9.4"
+  }
+}
